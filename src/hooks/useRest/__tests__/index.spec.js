@@ -18,7 +18,7 @@ describe('useRest hook', () => {
     expect(fakeAgent.default.get).not.toHaveBeenCalled();
   });
 
-  it('should make a GET call if LAZY loading is turned OFF', () => {
+  it('should make a GET call', () => {
     url = 'url';
     fakeAgent.default.get.mockResolvedValue({ body: 'getData' });
     renderHook(() => useRest(url, data));
